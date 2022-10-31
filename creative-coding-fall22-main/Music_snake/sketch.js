@@ -10,6 +10,8 @@
 
 //the problems haven't solved: musicnote image didn't work as the food vector
 //losing sound effect won't stop so currently deleted
+//when the snake touched itself the game is not deadly end
+
 
 let snake;
 let rez = 20; //canvas rescale to 20x20
@@ -25,15 +27,15 @@ let hit;
 
 function preload() {
   //musicNote = loadImage("musicnote.png");
-  lose = loadSound("Spooky.mp3");
-  bgm = loadSound("LANY-13.mp3");
-  hit = loadSound("wow.mp3");
+  //lose = loadSound("Spooky.mp3");
+  //bgm = loadSound("LANY-13.mp3");
+  //hit = loadSound("wow.mp3");
 }
 
 function setup() {
   createCanvas(400, 400);
-  bgm.loop();
-  bgm.setVolume(0.4);
+  // bgm.loop();
+  // bgm.setVolume(0.4);
   restart(); //put all the setup into restart function
   button = createButton("restart");
   button.mousePressed(restart); //re-call the setup again
