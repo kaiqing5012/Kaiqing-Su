@@ -25,12 +25,12 @@ let button;
 let d;
 let hit;
 
-function preload() {
-  //musicNote = loadImage("musicnote.png");
-  //lose = loadSound("Spooky.mp3");
+// function preload() {
+//   musicNote = loadImage("musicnote.png");
+//   lose = loadSound("Spooky.mp3");
 //   bgm = loadSound("LANY-13.mp3");
 //   hit = loadSound("wow.mp3");
-}
+// }
 
 function setup() {
   createCanvas(400, 400);
