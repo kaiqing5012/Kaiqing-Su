@@ -28,14 +28,14 @@ let hit;
 function preload() {
   //musicNote = loadImage("musicnote.png");
   //lose = loadSound("Spooky.mp3");
-  bgm = loadSound("LANY-13.mp3");
-  hit = loadSound("wow.mp3");
+//   bgm = loadSound("LANY-13.mp3");
+//   hit = loadSound("wow.mp3");
 }
 
 function setup() {
   createCanvas(400, 400);
-  bgm.loop();
-  bgm.setVolume(0.4);
+//   bgm.loop();
+//   bgm.setVolume(0.4);
   restart(); //put all the setup into restart function
   button = createButton("restart");
   button.mousePressed(restart); //re-call the setup again
