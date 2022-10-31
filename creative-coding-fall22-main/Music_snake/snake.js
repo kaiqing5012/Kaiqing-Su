@@ -27,8 +27,8 @@ class snakePart {
     let head = this.snakeParts[this.snakeParts.length-1].copy();//the coding train: copy the last part of the snake
     this.length++;//plus one
     this.snakeParts.push(head);//push this copy one to the tail of the snake
-    // hit.play();
-    // hit.setVolume(0.3);//play the music "wow"
+    hit.play();
+    hit.setVolume(0.3);//play the music "wow"
   }
 
   eat(pos) {
