@@ -5,11 +5,6 @@ let url = 'https://api.quotable.io/random';
 let quoteDisplay = document.getElementById('quote-display');
 let quoteInput = document.getElementById('quote-input');
 let timer = document.getElementById('timer');
-// let bg;
-
-// function preload(){
-//     bg = loadImage("bg.webp");
-// }
 
 
 quoteInput.addEventListener('input', () => {
@@ -96,23 +91,24 @@ function checker(){
 // } // borrowed from here: https://www.youtube.com/watch?v=R-7eQIHRszQ
 
 
+let interval;
 function startTimer(){
     let time = 60;
+    clearInterval(interval);
 // use setInterval function to decrement time by 1 every second
-    let interval = setInterval(() => {
-        timer.innerHTML = time;
+    interval = setInterval(() => {
+    timer.innerHTML = time;
+    time--;
     // check if time is up
-        if (time == 0) {
-            clearInterval(interval);
-            timer.innerHTML = "Time's up! Refresh to try again.";// stop interval and print message
+    if (time == 0) {
+        clearInterval(interval);
+        timer.innerHTML = "Time's up! Refresh to try again.";// stop interval and print message
             // alert("Refresh the page to try again.");//alert makes the timer to continue countdown???
-        }
-        time--;
+    }
     }, 1000);
 }
 
 function setup() {
-    // background(bg);
     getQuote(url);
 }
 
